@@ -17,6 +17,7 @@ public class HyyDataListDaoGenerator {
 	public static void main(String[] args) throws IOException, Exception {
 		// TODO Auto-generated method stub
 		Schema schema = new Schema(1, "com.hyy.hyydatalist.generator");
+		schema.enableKeepSectionsByDefault();
 //		addMessage(schema);
 //		addAlarm(schema);
 		
@@ -35,6 +36,7 @@ public class HyyDataListDaoGenerator {
 		messages.addStringProperty("shortcut");
 		messages.addStringProperty("content");
 		messages.addStringProperty("alarmstatus").getProperty();
+		//messages.setHasKeepSections(true);
 		
 		//Entity for alarm
 		Entity alarms = schema.addEntity("Alarms");
